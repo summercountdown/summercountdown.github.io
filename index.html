@@ -1,19 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<title>Summer timer</title>
+<link rel="shortcut icon" type="image/x-icon" href="palm32x32.png"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-	text-align: center;
-	font-size: 60px;
-	margin-top: 0px;
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
-
-<p id="demo"></p>
-
+<div class=background>
+<div class="timer">
+<p id="text">До лета осталось</p>
+<p id="date"></p>
+<p id="timer"</p>
+</div>
+</div>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 1, 2021 00:00:01").getTime();
@@ -34,17 +36,17 @@ var x = setInterval(function() {
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 	// Output the result in an element with id="demo"
-	document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	document.getElementById("date").innerHTML = days + "дней ";
+	document.getElementById("timer").innerHTML = hours + "h "
 		+ minutes + "m " + seconds + "s ";
 
 	// If the count down is over, write some text 
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("demo").innerHTML = "EXPIRED";
+		document.getElementById("timer").innerHTML = "EXPIRED";
 	}
 }, 1000);
 </script>
-
 </body>
 </html>
 

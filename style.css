@@ -1,0 +1,39 @@
+html, body { 
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Press Start 2P', cursive;
+	color: #eae7dc;
+}
+
+.background {
+	background-image: url(bg.jpg);
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.timer {
+	width: 800px;
+	height: 100px;
+	/*background-color: red;*/
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+p#text {
+	text-align: center;
+	font-size: 72px;
+	margin-top: 0px;
+}
+p#date, p#timer {
+	text-align: center;
+	font-size: 42px;
+	margin-top: 0px;
+}
