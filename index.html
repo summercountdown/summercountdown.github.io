@@ -18,6 +18,7 @@
 </div>
 <script>
 // Set the date we're counting down to
+//var countDownDate = new Date("Jun 1, 2021 00:00:01").getTime();
 var countDownDate = new Date("Jun 1, 2021 00:00:01").getTime();
 
 // Update the count down every 1 second
@@ -37,13 +38,15 @@ var x = setInterval(function() {
 
 	// Output the result in an element with id="demo"
 	document.getElementById("date").innerHTML = days + "дней ";
-	document.getElementById("timer").innerHTML = hours + "h "
-		+ minutes + "m " + seconds + "s ";
+	document.getElementById("timer").innerHTML = hours + "ч "
+		+ minutes + "м " + seconds + "с";
 
 	// If the count down is over, write some text 
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("timer").innerHTML = "EXPIRED";
+		document.getElementById("text").innerHTML = "А вот и лето:)";
+		document.getElementById("date").innerHTML = "";
+		document.getElementById("timer").innerHTML = "";
 	}
 }, 1000);
 </script>
