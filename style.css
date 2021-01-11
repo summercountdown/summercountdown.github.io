@@ -16,9 +16,8 @@ html, body {
 }
 
 .timer {
-	width: 100%px;
+	width: 100%;
 	height: 100px;
-	/*background-color: red;*/
 	position: absolute;
 	top:0;
 	bottom: 0;
