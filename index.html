@@ -36,7 +36,29 @@ var x = setInterval(function() {
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 	// Output the result in an element with id="demo"
-	document.getElementById("date").innerHTML = days + "дней ";
+    if (days.toString().includes("19") ||
+        days.toString().includes("18") ||
+        days.toString().includes("17") ||
+        days.toString().includes("16") ||
+        days.toString().includes("15") ||
+        days.toString().includes("14") ||
+        days.toString().includes("13") ||
+        days.toString().includes("12") || 
+        days.toString().includes("11")) {
+        document.getElementById("date").innerHTML = days + "дней ";
+        } 
+    else if (days.toString().includes("4", -1) ||
+             days.toString().includes("3", -1) ||
+             days.toString().includes("2", -1)) {
+        document.getElementById("date").innerHTML = days + "дня ";
+        } 
+    else if (days.toString().includes("1", -1)) { 
+        document.getElementById("text").innerHTML = "До лета остался";
+        document.getElementById("date").innerHTML = days + "день ";
+        }
+    else {
+        document.getElementById("date").innerHTML = days + "дней ";
+        }
 	document.getElementById("timer").innerHTML = hours + "ч "
 		+ minutes + "м " + seconds + "с";
 
